@@ -1,0 +1,28 @@
+switch (userText.ToUpper())
+{
+    case "TEXT":
+        objectMessage = _util.TextMessage("Este es un ejemplo", userNumber);
+        break;
+    
+    case "IMAGE":
+        objectMessage = _util.ImageMessage("https://www.mec4.com.bo/wp-content/uploads/2021/07/mec4pq.png", userNumber);
+        break;
+    case "AUDIO":
+        objectMessage = _util.AudioMessage("https://biostoragecloud.blob.core.windows.net/resource-udemy-whatsapp-node/audio_whatsapp.mp3", userNumber);
+        break;
+    case "VIDEO":
+        objectMessage = _util.VideoMessage("https://biostoragecloud.blob.core.windows.net/resource-udemy-whatsapp-node/video_whatsapp.mp4", userNumber);
+        break;
+    case "DOCUMENT":
+        objectMessage = _util.DocumentMessage("https://biostoragecloud.blob.core.windows.net/resource-udemy-whatsapp-node/document_whatsapp.pdf", userNumber);
+        break;
+    case "LOCATION":
+        objectMessage = _util.LocationMessage(userNumber);
+        break;
+    case "BUTTON":
+        objectMessage = _util.ButtonsMessage(userNumber);
+        break;
+    default:
+        objectMessage = _util.TextMessage("Lo siento no puedo entenderte", userNumber);
+        break;
+}
